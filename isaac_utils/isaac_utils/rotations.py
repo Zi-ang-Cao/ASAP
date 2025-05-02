@@ -171,14 +171,16 @@ def get_basis_vector(q: Tensor, v: Tensor, w_last: bool) -> Tensor:
     return quat_rotate(q, v, w_last)
 
 @torch.jit.script
-def quat_to_angle_axis(q):
-    # type: (Tensor) -> Tuple[Tensor, Tensor]
+def quat_to_angle_axis(q: Tensor, w_last:bool = True) -> Tuple[Tensor, Tensor]:
+    # type: (Tensor, bool) -> Tuple[Tensor, Tensor]
     # computes axis-angle representation from quaternion q
     # q must be normalized
     # ZL: could have issues. 
     min_theta = 1e-5
-    qx, qy, qz, qw = 0, 1, 2, 3
-
+    if w_last:
+        qx, qy, qz, qw = 0, 1, 2, 3
+    else:
+        qw, qx, qy, qz = 0, 1, 2, 3
     sin_theta = torch.sqrt(1 - q[..., qw] * q[..., qw])
     angle = 2 * torch.acos(q[..., qw])
     angle = normalize_angle(angle)
