@@ -5,7 +5,7 @@ defaults:
 
 robot:
   # Observation parameters
-  num_bodies: 24
+  num_bodies: 22
   dof_obs_size: 21
   actions_dim: 21
   lower_body_actions_dim: 13 # Yuanhang
