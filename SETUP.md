@@ -28,6 +28,25 @@ experiment_name=Basic_Loco_May4_09PM_SRC01 \
 wandb.wandb_id=run_20250504_9PM_low_pd
 ```
 
+### 21dof + SRC03
+
+```Shell
+HYDRA_FULL_ERROR=1 python humanoidverse/train_agent.py \
++simulator=isaacgym \
++exp=locomotion \
++domain_rand=domain_rand_loco \
++rewards=loco/reward_g1_locomotion \
++robot=g1/g1_29dof_anneal_21dof \
++terrain=terrain_locomotion_plane \
++obs=loco/leggedloco_obs_history_wolinvel \
+opt=wandb.yaml \
++opt=eval_analysis_plot_locomotion.yaml \
+num_envs=4096 \
+project_name=Basic_Loco \
+experiment_name=Basic_Loco_May4_10PM_SRC03_21dof \
+wandb.wandb_id=run_20250504_10PM_low_pd_21dof
+```
+
 ## Eval the ckpt
 > `
 python humanoidverse/eval_agent.py \
