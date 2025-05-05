@@ -129,32 +129,32 @@ robot:
       hip_yaw: 100
       hip_roll: 100
       hip_pitch: 100
-      knee: 200
-      ankle_pitch: 20
-      ankle_roll: 20
-      waist_yaw: 400
-      waist_roll: 400
-      waist_pitch: 400
-      shoulder_pitch: 90
-      shoulder_roll: 60
-      shoulder_yaw: 20
-      elbow: 60
+      knee: 150 # 200
+      ankle_pitch: 40 # 20
+      ankle_roll: 40 # 20
+      waist_yaw: 150 # 400
+      waist_roll: 150 # 400
+      waist_pitch: 150 # 400
+      shoulder_pitch: 40 # 90
+      shoulder_roll: 40 # 60
+      shoulder_yaw: 40 # 20
+      elbow: 50 # 60
 
 
     damping: # [N*m/rad]  # [N*m*s/rad]
-      hip_yaw: 2.5
-      hip_roll: 2.5
-      hip_pitch: 2.5
-      knee: 5.0
-      ankle_pitch: 0.2
-      ankle_roll: 0.1
-      waist_yaw: 5.0
-      waist_roll: 5.0
-      waist_pitch: 5.0
-      shoulder_pitch: 2.0
-      shoulder_roll: 1.0
-      shoulder_yaw: 0.4
-      elbow: 1.0
+      hip_yaw: 2 # 2.5
+      hip_roll: 2 # 2.5
+      hip_pitch: 2 # 2.5
+      knee: 4 # 5.0
+      ankle_pitch: 2 # 0.2
+      ankle_roll: 2 # 0.1
+      waist_yaw: 4 # 5.0
+      waist_roll: 4 # 5.0
+      waist_pitch: 4 # 5.0
+      shoulder_pitch: 5 # 2.0
+      shoulder_roll: 5 # 1.0
+      shoulder_yaw: 5 # 0.4
+      elbow: 2 # 1.0
 
     # action scale: target angle = actionScale * action + defaultAngle
     action_scale: 0.25
@@ -178,7 +178,8 @@ robot:
     xml_file: "g1/${robot.asset.robot_type}.xml"
     # xml_file: "g1/${robot.asset.robot_type}_fitmotionONLY.xml"
     robot_type: g1_29dof_anneal_23dof
-    self_collisions: 1 # 1 to disable, 0 to enable self collisions
+    # self_collisions: 0 # 1 to disable, 0 to enable self collisions
+    self_collisions: -1 # -1 to follow the xml collision mesh, 1 to disable, 0 to enable self collisions
     default_dof_drive_mode: 3
 
     fix_base_link: False # TEST: fix base link to world

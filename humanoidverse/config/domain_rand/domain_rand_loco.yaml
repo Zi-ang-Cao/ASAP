@@ -1,0 +1,23 @@
+# @package _global_
+
+defaults:
+  - NO_domain_rand
+
+domain_rand:
+  push_robots : True
+
+  randomize_friction : True
+
+  randomize_base_mass : False # replaced by randomize_link_mass??
+
+  randomize_base_com : False
+
+  randomize_link_mass : False
+
+  randomize_pd_gain : True
+
+  randomize_torque_rfi : True
+
+  randomize_ctrl_delay : False
+
+

@@ -56,6 +56,14 @@ obs:
     history: 0.0,
   }
 
+  add_noise_currculum: False
+  noise_initial_value: 0.05
+  noise_value_max: 1.00
+  noise_value_min: 0.00001
+  soft_dof_pos_curriculum_degree: 0.00001
+  soft_dof_pos_curriculum_level_down_threshold: 100
+  soft_dof_pos_curriculum_level_up_threshold: 900
+
   # obs_dims should use list instead of dict
   # will be converted to dict in `pre_process_config`
   obs_dims:

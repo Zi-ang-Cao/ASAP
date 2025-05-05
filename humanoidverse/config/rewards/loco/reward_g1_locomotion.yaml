@@ -46,7 +46,7 @@ rewards:
     soft_torque_limit: 0.825
 
     reward_limits_curriculum:
-      soft_dof_pos_curriculum: False
+      soft_dof_pos_curriculum: True
       soft_dof_pos_initial_limit: 1.15
       soft_dof_pos_max_limit: 1.15
       soft_dof_pos_min_limit: 0.95
@@ -54,7 +54,7 @@ rewards:
       soft_dof_pos_curriculum_level_down_threshold: 40
       soft_dof_pos_curriculum_level_up_threshold: 42
 
-      soft_dof_vel_curriculum: False
+      soft_dof_vel_curriculum: True
       soft_dof_vel_initial_limit: 1.15
       soft_dof_vel_max_limit: 1.25
       soft_dof_vel_min_limit: 0.95
@@ -62,7 +62,7 @@ rewards:
       soft_dof_vel_curriculum_level_down_threshold: 40
       soft_dof_vel_curriculum_level_up_threshold: 42
 
-      soft_torque_curriculum: False
+      soft_torque_curriculum: True
       soft_torque_initial_limit: 1.15
       soft_torque_max_limit: 1.25
       soft_torque_min_limit: 0.85
@@ -76,7 +76,7 @@ rewards:
   desired_base_height: 0.78
   close_feet_threshold: 0.15
 
-  reward_penalty_curriculum: False
+  reward_penalty_curriculum: True
   reward_initial_penalty_scale : 1.0
   reward_min_penalty_scale: 0.0
   reward_max_penalty_scale: 1.0

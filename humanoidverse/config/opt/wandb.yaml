@@ -3,9 +3,9 @@
 use_wandb: True
 
 wandb:
-  wandb_project: null
+  wandb_project: "ASAP_G1"
   wandb_tags: 'online' # 'online' or 'offline' or 'disabled'
-  wandb_group: null
-  wandb_id: null
-  wandb_entity: agileh2o
+  wandb_group: "loco_for_sim2sim"
+  wandb_id: "run_202505_loco_for_sim2sim"
+  wandb_entity: "zi-ang-cao"
   wandb_dir: ${experiment_dir}/.wandb
